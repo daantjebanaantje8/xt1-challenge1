@@ -1,0 +1,139 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+section{
+	display: flex;
+	flex-flow: column nowrap;
+	min-width: 300px;
+}
+
+article{
+	display: flex;
+	min-height: 667px;
+	background-color: white;
+	flex-flow: column nowrap;
+}
+
+/*Color TV*/
+article:nth-child(1){
+	background-color: #FF9100;
+}
+
+/*NES*/
+article:nth-child(2){
+	background-color: #9A9894;
+}
+
+/*SNES*/
+article:nth-child(3){
+	background-color: #8562B3;
+}
+
+/*N64*/
+article:nth-child(4){
+	background-color: #FFC001;
+}
+
+/*GameCube*/
+article:nth-child(5){
+	background-color: #6A5AAE;
+}
+
+/*Switch*/
+article:nth-child(8){
+	background: linear-gradient(90deg, #7CDAF9 50%, #FF5C68 50%);
+}
+
+/*als je article flexbox gebruikt zijn de meeste onderstaande niet nodig*/
+/*voor de logo's van Color TV, NES en SNES*/
+.logobreed{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/*voor de logo's van N64, GameCube en Switch*/
+.logovierkant{
+	width:60%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/*voor de logo's van Wii en Wii U*/
+.logowii{
+	width:60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	display: block;
+}
+
+/*foto van console*/
+.pic{
+	width:70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.datum{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+.omschrijving{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#SNEStekst, #gamecubetekst, #SNESdatum, #gamecubedatum{
+	color: white;
+}
+
+/*als het design niet klopt, meer breakpoints toevoegen*/
+/*ipad breakpoint*/
+@media only screen and (min-width: 768px){
+	article{
+		min-height: 1024px;
+	}
+	body{
+		font-size: 20px;
+	}
+}
+
+/*klein desktop breakpoint*/
+@media only screen and (min-width: 1024px){
+	article{
+		min-height: 702px;
+		flex-flow: row nowrap;
+	}
+	.left{
+		align-self: flex-start;
+		margin: auto;
+		width: 200%;
+	}
+	.right{
+		margin: auto;
+		width: 200%;
+	}
+}
+
+/*groot desktop breakpoint*/
+@media only screen and (min-width: 1440px){
+	article{
+		min-height: 878px;
+	}
+	body{
+		font-size: 25px;
+	}
+
+}
